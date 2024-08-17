@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-17T10:04:01Z" name="Amazon Test Regression Suite" finished-at="2024-08-17T10:05:01Z" duration-ms="60229">
+    <groups>
+    </groups>
+    <test started-at="2024-08-17T10:04:01Z" name="Amazon Login Page Test_edge" finished-at="2024-08-17T10:05:01Z" duration-ms="60229">
+      <class name="com.amazon.tests.AmazonLoginPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.amazon.tests.AmazonLoginPageTest@54a7079e]" started-at="2024-08-17T10:04:01Z" name="setup" finished-at="2024-08-17T10:04:31Z" duration-ms="30032" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="appLoginTest()[pri:1, instance:com.amazon.tests.AmazonLoginPageTest@54a7079e]" started-at="2024-08-17T10:04:31Z" name="appLoginTest" finished-at="2024-08-17T10:04:39Z" duration-ms="8596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appLoginTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:2, instance:com.amazon.tests.AmazonLoginPageTest@54a7079e]" started-at="2024-08-17T10:04:44Z" name="searchTest" data-provider="getProductData" finished-at="2024-08-17T10:04:50Z" duration-ms="6219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wireless mouse]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="addToCartTest(java.lang.String)[pri:3, instance:com.amazon.tests.AmazonLoginPageTest@54a7079e]" started-at="2024-08-17T10:04:51Z" name="addToCartTest" data-provider="getProductName" finished-at="2024-08-17T10:05:00Z" duration-ms="9022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Amazon Basics 2.4 Ghz Wireless Optical Computer Mouse with USB Nano Receiver, Black]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.tests.AmazonLoginPageTest@54a7079e]" started-at="2024-08-17T10:05:00Z" name="tearDown" finished-at="2024-08-17T10:05:01Z" duration-ms="597" status="FAIL">
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Failed to read message from driver, pipe closed.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Failed to read message from driver, pipe closed.
+at com.microsoft.playwright.impl.PipeTransport.poll(PipeTransport.java:75)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:202)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:115)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+at com.microsoft.playwright.impl.BrowserImpl.closeImpl(BrowserImpl.java:77)
+at com.microsoft.playwright.impl.BrowserImpl.lambda$close$0(BrowserImpl.java:64)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.BrowserImpl.close(BrowserImpl.java:64)
+at com.amazon.base.BaseTest.tearDown(BaseTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.afterRun(TestRunner.java:725)
+at org.testng.TestRunner.run(TestRunner.java:509)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.EOFException
+at com.microsoft.playwright.impl.ReaderThread.readIntLE(PipeTransport.java:110)
+at com.microsoft.playwright.impl.ReaderThread.readMessage(PipeTransport.java:139)
+at com.microsoft.playwright.impl.ReaderThread.run(PipeTransport.java:125)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.amazon.tests.AmazonLoginPageTest -->
+    </test> <!-- Amazon Login Page Test_edge -->
+  </suite> <!-- Amazon Test Regression Suite -->
+</testng-results>

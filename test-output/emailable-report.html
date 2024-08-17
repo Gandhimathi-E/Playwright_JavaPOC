@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Amazon Test Regression Suite</th></tr>
+<tr><td><a href="#t0">Amazon Login Page Test_edge</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">60,229</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Amazon Test Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Amazon Login Page Test_edge &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.amazon.tests.AmazonLoginPageTest</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1723889100863</td><td rowspan="1">597</td></tr><tr><th colspan="4">Amazon Login Page Test_edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.amazon.tests.AmazonLoginPageTest</td><td><a href="#m1">addToCartTest</a></td><td rowspan="1">1723889091009</td><td rowspan="1">9022</td></tr><tr class="passedeven"><td><a href="#m2">appLoginTest</a></td><td rowspan="1">1723889071294</td><td rowspan="1">8596</td></tr><tr class="passedeven"><td><a href="#m3">searchTest</a></td><td rowspan="1">1723889084070</td><td rowspan="1">6219</td></tr></tbody>
+</table>
+<h2>Amazon Login Page Test_edge</h2><h3 id="m0">com.amazon.tests.AmazonLoginPageTest#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Failed to read message from driver, pipe closed.
+	at com.microsoft.playwright.impl.PipeTransport.poll(PipeTransport.java:75)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:202)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:115)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserImpl.closeImpl(BrowserImpl.java:77)
+	at com.microsoft.playwright.impl.BrowserImpl.lambda$close$0(BrowserImpl.java:64)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.BrowserImpl.close(BrowserImpl.java:64)
+	at com.amazon.base.BaseTest.tearDown(BaseTest.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.afterRun(TestRunner.java:725)
+	at org.testng.TestRunner.run(TestRunner.java:509)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.EOFException
+	at com.microsoft.playwright.impl.ReaderThread.readIntLE(PipeTransport.java:110)
+	at com.microsoft.playwright.impl.ReaderThread.readMessage(PipeTransport.java:139)
+	at com.microsoft.playwright.impl.ReaderThread.run(PipeTransport.java:125)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.amazon.tests.AmazonLoginPageTest#addToCartTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Amazon Basics 2.4 Ghz Wireless Optical Computer Mouse with USB Nano Receiver, Black</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.amazon.tests.AmazonLoginPageTest#appLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.amazon.tests.AmazonLoginPageTest#searchTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>wireless mouse</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

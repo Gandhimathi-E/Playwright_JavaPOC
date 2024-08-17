@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Amazon Test Regression Suite]" guice-stage="DEVELOPMENT" verbose="4">
+  <listeners>
+    <listener class-name="com.amazon.listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Amazon Login Page Test_edge(failed)" verbose="4">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.amazon.tests.AmazonLoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="addToCartTest" invocation-numbers="0"/>
+          <include name="searchTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.amazon.tests.AmazonLoginPageTest -->
+    </classes>
+  </test> <!-- Amazon Login Page Test_edge(failed) -->
+</suite> <!-- Failed suite [Amazon Test Regression Suite] -->
